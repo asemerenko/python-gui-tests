@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64589cf9-17c9-4177-ac95-f5b1257e679d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="64589cf9-17c9-4177-ac95-f5b1257e679d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="190" />
     <option name="y" value="160" />
     <option name="width" value="1750" />
@@ -100,21 +98,6 @@
             <path>
               <item name="python-gui-tests" type="b2602c69:ProjectViewProjectNode" />
               <item name="python-gui-tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python-gui-tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python-gui-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="fixture" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python-gui-tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python-gui-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python-gui-tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python-gui-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -188,7 +171,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
