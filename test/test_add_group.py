@@ -1,8 +1,8 @@
 import operator
 
 
-def test_add_group(app, json_groups):
-    group = json_groups
+def test_add_group(app, xl_groups):
+    group = xl_groups
     old_list = app.groups.get_group_list()
     app.groups.add_new_group(group)
     new_list = app.groups.get_group_list()
