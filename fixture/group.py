@@ -17,7 +17,7 @@ class GroupHelper:
             for node in root.children():
                 text = node.text()
                 self.group_cache.append(Group(name=text))
-        return list(self.group_cache)
+        return self.group_cache
 
     def add_new_group(self, name):
         self.open_group_editor()
@@ -35,3 +35,11 @@ class GroupHelper:
 
     def close_group_editor(self):
         self.group_editor.close()
+
+    def delete_group_by_index(self, index):
+        self.open_group_editor()
+        tree = self.group_editor.window(auto_id="uxAddressTreeView")
+        root = tree.tree_root()
+        list = root.children()
+        self.app.application.window(list[index]).select()
+        pass
