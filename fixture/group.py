@@ -40,6 +40,5 @@ class GroupHelper:
         self.open_group_editor()
         tree = self.group_editor.window(auto_id="uxAddressTreeView")
         root = tree.tree_root()
-        list = root.children()
-        self.app.application.window(list[index]).select()
+        root.children()[index].select()
         pass
