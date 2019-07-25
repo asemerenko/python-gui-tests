@@ -5,9 +5,9 @@ import operator
 
 
 def test_delete_some_group(app):
-    old_list = app.groups.get_group_list()
-    if len(old_list) == 0:
+    if len(app.groups.get_group_list()) <= 1:
         app.groups.add_new_group(Group(name="New group"))
+    old_list = app.groups.get_group_list()
     index = randrange(len(old_list))
     app.groups.delete_group_by_index(index)
     new_list = app.groups.get_group_list()

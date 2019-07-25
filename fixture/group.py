@@ -6,18 +6,16 @@ class GroupHelper:
     def __init__(self, app):
         self.app = app
 
-    group_cache = None
-
     def get_group_list(self):
-        if self.group_cache is None:
-            self.open_group_editor()
-            self.group_cache = []
-            tree = self.group_editor.window(auto_id="uxAddressTreeView")
-            root = tree.tree_root()
-            for node in root.children():
-                text = node.text()
-                self.group_cache.append(Group(name=text))
-        return self.group_cache
+        self.open_group_editor()
+        group_list = []
+        tree = self.group_editor.window(auto_id="uxAddressTreeView")
+        root = tree.tree_root()
+        for node in root.children():
+            text = node.text()
+            group_list.append(Group(name=text))
+        self.close_group_editor()
+        return group_list
 
     def add_new_group(self, name):
         self.open_group_editor()
@@ -26,7 +24,6 @@ class GroupHelper:
         input.set_text(name)
         input.type_keys("\n")
         self.close_group_editor()
-        self.group_cache = None
 
     def open_group_editor(self):
         self.app.main_window.window(auto_id="groupButton").click()
@@ -41,4 +38,9 @@ class GroupHelper:
         tree = self.group_editor.window(auto_id="uxAddressTreeView")
         root = tree.tree_root()
         root.children()[index].select()
-        pass
+        self.group_editor.window(auto_id="uxDeleteAddressButton").click()
+        self.group_delete = self.app.application.window(title='Delete group')
+        self.group_delete.wait('visible')
+        self.group_delete.window(auto_id="uxDeleteAllRadioButton").click()
+        self.group_delete.window(auto_id="uxOKAddressButton").click()
+        self.close_group_editor()
